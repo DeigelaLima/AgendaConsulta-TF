@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recepcionistas",
+  "info": {
+    "singularName": "recepcionista",
+    "pluralName": "recepcionistas",
+    "displayName": "recepcionista"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "senha": {
+      "type": "password",
+      "required": true
+    },
+    "consultas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta.consulta",
+      "mappedBy": "recepcionista"
+    }
+  }
+}

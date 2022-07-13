@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pacientes",
+  "info": {
+    "singularName": "paciente",
+    "pluralName": "pacientes",
+    "displayName": "paciente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "senha": {
+      "type": "password"
+    },
+    "consultas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta.consulta",
+      "mappedBy": "paciente"
+    }
+  }
+}

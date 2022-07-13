@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultas",
+  "info": {
+    "singularName": "consulta",
+    "pluralName": "consultas",
+    "displayName": "consulta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "medico": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::medico.medico",
+      "inversedBy": "consultas"
+    },
+    "paciente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paciente.paciente",
+      "inversedBy": "consultas"
+    },
+    "recepcionista": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recepcionista.recepcionista",
+      "inversedBy": "consultas"
+    },
+    "preco": {
+      "type": "decimal"
+    },
+    "data": {
+      "type": "date"
+    },
+    "horario": {
+      "type": "time"
+    }
+  }
+}
