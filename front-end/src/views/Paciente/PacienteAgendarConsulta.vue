@@ -37,9 +37,9 @@ export default {
       consulta: {
         status: false,
         effected:  false,
-        medicId:  null,
-        clientId: null,
-        medicName: null,
+        medicoId:  null,
+        pacienteId: null,
+        medicoNome: null,
         preco:  null,
         day:  null,
         hourInit: null,
@@ -55,7 +55,7 @@ export default {
   mounted(){
     Pacientes.getPaciente(1).then(res => {
       this.pacienteLogado = res.data.Data[0]
-      this.consulta.clientId = res.data.Data[0].id
+      this.consulta.pacienteId = res.data.Data[0].id
     }),
     this.init()
     var today = new Date();
@@ -82,9 +82,9 @@ export default {
       }
     },
     init () {
-      this.consulta.medicId = this.$route.params.medicId
-      this.consulta.medicName = this.$route.params.medicName
-      this.consulta.price = this.$route.params.price
+      this.consulta.medicoId = this.$route.params.medicoId
+      this.consulta.medicoNome = this.$route.params.medicoNome
+      this.consulta.preco = this.$route.params.preco
     },
     add25(h){
       let aux = h.split(':')

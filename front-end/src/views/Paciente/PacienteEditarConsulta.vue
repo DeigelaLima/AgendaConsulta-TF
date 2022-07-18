@@ -37,13 +37,13 @@ export default {
         id: null,
         status: null,
         effected:  null,
-        medicId:  null,
-        clientId:  null,
-        medicName: null,
-        clientName: null,
+        medicoId:  null,
+        pacienteId:  null,
+        medicoNome: null,
+        pacienteNome: null,
         state: null,
         city: null,
-        price:  null,
+        preco:  null,
         day:  null,
         hourInit: null,
         hourEnd: null
@@ -57,13 +57,13 @@ export default {
       this.consulta.id = this.$route.params.consulta.id
       this.consulta.status = this.$route.params.consulta.status
       this.consulta.effected =  this.$route.params.consulta.effected
-      this.consulta.medicId = this.$route.params.consulta.medicId
-      this.consulta.clientId = this.$route.params.consulta.clientId
-      this.consulta.medicName = this.$route.params.consulta.medicName
-      this.consulta.clientName = this.$route.params.consulta.clientName
+      this.consulta.medicoId = this.$route.params.consulta.medicId
+      this.consulta.pacienteId = this.$route.params.consulta.clientId
+      this.consulta.medicoNome = this.$route.params.consulta.medicName
+      this.consulta.pacienteNome = this.$route.params.consulta.clientName
       this.consulta.state = this.$route.params.consulta.state
       this.consulta.city = this.$route.params.consulta.city
-      this.consulta.price =  this.$route.params.consulta.price
+      this.consulta.preco =  this.$route.params.consulta.price
       this.consulta.day =  this.formatDate(this.$route.params.consulta.day)
       this.consulta.hourInit = this.formatHour(this.$route.params.consulta.hourInit)
       this.consulta.hourEnd = this.formatHour(this.$route.params.consulta.hourEnd)

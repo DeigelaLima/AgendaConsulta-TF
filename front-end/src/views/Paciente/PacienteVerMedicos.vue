@@ -23,8 +23,8 @@
           <span class="atributo"><b>Nome</b>: {{med.nome}}</span>
           <span class="atributo"><b>Local</b>: {{med.city}}-{{med.state}}</span>
           <span class="atributo"><b>Especialidade:</b> {{med.areaOfOcupation}}</span>
-          <span class="atributo"><b>Preço por consulta:</b> R$ {{med.price}},00</span>
-          <router-link :to="{name: 'pacienteAgendarConsulta', params:{id:med.id ,medicId: med.id, price: med.price, medicName: med.name+' '+med.lastName} }" >
+          <span class="atributo"><b>Preço por consulta:</b> R$ {{med.preco}},00</span>
+          <router-link :to="{name: 'pacienteAgendarConsulta', params:{id:med.id ,medicId: med.id, price: med.preco, medicName: med.name+' '+med.lastName} }" >
             <button class="btn-primary">Agendar Consulta</button>
           </router-link>
         </li>

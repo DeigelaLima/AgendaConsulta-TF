@@ -14,7 +14,7 @@
                 <p class="card-text"><b>Local:</b> {{c.city+'-'+c.state}} </p>
                 <p class="card-text"><b>Data:</b> {{formatDate(c.day)}}</p>
                 <p class="card-text"><b>Horário:</b> {{formatHour(c.hourInit)}}</p>
-                <p class="card-text"><b>Preço:</b> R$ {{c.price}},00</p>
+                <p class="card-text"><b>Preço:</b> R$ {{c.preco}},00</p>
               </div>
               <div class="cart-footer">
                 <button class="btn-danger btn-excluir" data-bs-toggle="modal" :data-bs-target="'#confModalexcluir'+c.id">Cancelar solicitação</button>
